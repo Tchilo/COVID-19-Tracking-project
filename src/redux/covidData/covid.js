@@ -5,7 +5,6 @@ const initialState = {
   covid: [],
 };
 
-// ACTIONS
 const loadData = (covid) => ({
   type: FETCH_DATA,
   payload: covid,
