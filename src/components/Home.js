@@ -14,6 +14,18 @@ function Home() {
     }
   }, []);
   const Europe = covidReducer.filter((item) => item.continent === 'Europe');
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className='body'>
       
@@ -35,6 +47,9 @@ function Home() {
         })
       }
     </div>
+
+
+
   );
 }
 
