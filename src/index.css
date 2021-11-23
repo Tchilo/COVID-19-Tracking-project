@@ -11,3 +11,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.return {
+  width: 27px;
+}
+
+.top-right {
+  display: flex;
+}
