@@ -15,8 +15,9 @@ function Home() {
   }, []);
   const Europe = covidReducer.filter((item) => item.continent === 'Europe')
   return (
+    <>
+      <div className="heading"> <h1>EUROPE COUNTIES' COVID-19 DATA</h1> </div>
     <div className='body'>
-      
         {
         Europe.map((data) => {
           const {
@@ -29,8 +30,10 @@ function Home() {
 
 
             <div className="main-cont" key={country}>
-              {country}
-              <img src={flag} alt={country} />
+             <h2 className="country">{country}</h2> 
+              <div className="image">
+              <img className="img" src={flag} alt={country} />
+              </div>
 
             </div>
             </Link>
@@ -39,6 +42,7 @@ function Home() {
         })
       }
     </div>
+    </>
 
   );
 }
