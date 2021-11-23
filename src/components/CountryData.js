@@ -1,20 +1,39 @@
 import React, { useEffect } from 'react';
+import { useParams } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchData } from '../redux/covidData/covid';
 
 function CountryData() {
-  const covideReducer = useSelector((state) => state.covideReducer.covid);
-  console.log(covideReducer);
-
+  const covidReducer = useSelector((state) => state.covidReducer.covid);
   const dispatch = useDispatch();
+  const { name } = useParams();
+  const findCountry = covidReducer.find((country) => country.country === name);
+  console.log(findCountry);
   useEffect(() => {
-    if (!covideReducer) {
+    if (!covidReducer.length) {
       dispatch(fetchData());
     }
   }, []);
 
   return (
-    <div />
+    <div>
+
+      <ul key={findCountry.country}>
+        <p>
+          Country:
+          {findCountry.country}
+        </p>
+        <p>
+          Population:
+          { findCountry.population }
+        </p>
+        <p>
+          Deaths:
+          { findCountry.deaths }
+        </p>
+      </ul>
+    </div>
+
   );
 }
 

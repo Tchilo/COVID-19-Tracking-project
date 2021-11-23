@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 import { fetchData } from '../redux/covidData/covid';
 
 function Home() {
@@ -13,19 +13,7 @@ function Home() {
       dispatch(fetchData());
     }
   }, []);
-  const Europe = covidReducer.filter((item) => item.continent === 'Europe');
-
-
-
-
-
-
-
-
-
-
-
-
+  const Europe = covidReducer.filter((item) => item.continent === 'Europe')
   return (
     <div className='body'>
       
@@ -37,18 +25,20 @@ function Home() {
           } = data;
 
           return (
+            <Link key={country} to={{pathname: `/country/${country}`}}>
+
+
             <div className="main-cont" key={country}>
               {country}
               <img src={flag} alt={country} />
 
             </div>
+            </Link>
 
           );
         })
       }
     </div>
-
-
 
   );
 }

@@ -1,11 +1,13 @@
 import React from 'react';
-import { FaBeer } from 'react-icons/fa';
+import mic from '../images/mic-svgrepo-com.svg';
 
 function Navbar() {
   return (
     <nav>
-      <h2>COVID-19 UPDATES</h2>
-      <FaBeer />
+      <div className="top-left">
+        <img src={mic} alt="" />
+      </div>
+      <h2>COVID-19 DATA</h2>
     </nav>
   );
 }
