@@ -2,6 +2,8 @@
 
 # COVID-19-Tracking-project
 
+![HomePage](./home.png)          ![Details Page](./data.png)
+
 > COVID-19-Tracking-project is a project built using React and redux in this project information on the COVID-19 virus is being fetched from an API. This Application shows data on COVID-19 in European countries, the information is on COVID-19 cases, deaths, people tested etc.
 
 
