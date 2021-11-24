@@ -95,6 +95,12 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
+Microverse
+
+React and React Router documentation
+
+Hats off to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the design inspiration.
+
 
 ### Data is provided by the following institutions:
 

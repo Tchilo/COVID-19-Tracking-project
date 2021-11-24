@@ -16,7 +16,7 @@ function Home() {
   const navigate = useNavigate();
   Europe = Europe.filter((country) => country.country.includes(buscar.toLocaleUpperCase()));
   const [searchInput, setSearchInput] = useState(buscar)
-  
+
   useEffect(() => {
     if (!covidReducer.length) {
       dispatch(fetchData());
