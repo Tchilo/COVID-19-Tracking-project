@@ -22,6 +22,9 @@ Additional description about the project and its features.
 
 [Click here](https://covid-19-tracking-project.netlify.app/) 
 
+## Link to video
+[click here](https://www.loom.com/share/63cb296f86e74f8e90ea6ff607edc715)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.

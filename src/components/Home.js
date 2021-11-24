@@ -12,9 +12,11 @@ function Home() {
   const loci = useLocation()
   const query = new URLSearchParams(loci.search)
   const buscar = query.get('buscar') || '';
+
   const navigate = useNavigate();
   Europe = Europe.filter((country) => country.country.includes(buscar.toLocaleUpperCase()));
   const [searchInput, setSearchInput] = useState(buscar)
+  
   useEffect(() => {
     if (!covidReducer.length) {
       dispatch(fetchData());
